@@ -1,0 +1,6 @@
+import csv
+#read file
+reader = csv.reader(open(r"/home/nomeer/filename.csv"),delimiter='!')
+#filter it for second column if it is 1 in the second column
+filtered1 = filter(lambda p: '1' == p[1], reader)
+csv.writer(open(r"filename_1.csv",'w'),delimiter=',').writerows(filtered1)
